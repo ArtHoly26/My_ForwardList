@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
@@ -6,8 +6,8 @@ using namespace std;
 
 class Element
 {
-	int Data;           //значение элемента
-	Element* pNext;     //адрес следующего элемента
+	int Data;           //Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
+	Element* pNext;     //Р°РґСЂРµСЃ СЃР»РµРґСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°
 	static int count;
 public:
 	Element(int Data, Element* pNext = nullptr) : Data(Data), pNext(pNext)
@@ -59,12 +59,12 @@ public:
 
 class ForwardList
 {
-	Element* Head;    //Голова списка - содержит указатель на нулевой элемент списка 
+	Element* Head;    //Р“РѕР»РѕРІР° СЃРїРёСЃРєР° - СЃРѕРґРµСЂР¶РёС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР° 
 	int size;
 public:
 	ForwardList()
 	{
-		Head = nullptr;   //Если список пуст, то его голова указывает на 0
+		Head = nullptr;   //Р•СЃР»Рё СЃРїРёСЃРѕРє РїСѓСЃС‚, С‚Рѕ РµРіРѕ РіРѕР»РѕРІР° СѓРєР°Р·С‹РІР°РµС‚ РЅР° 0
 		size = 0;
 	}
 	ForwardList(const std::initializer_list<int> &il) :ForwardList()
@@ -141,14 +141,14 @@ public:
 
 	void print()const
 	{
-		Element* Temp = Head;  //Temp это итератор
+		Element* Temp = Head;  //Temp СЌС‚Рѕ РёС‚РµСЂР°С‚РѕСЂ
 		while (Temp)
 		{
 			cout << Temp << tab << Temp->Data << tab << Temp->pNext << endl;
 			Temp = Temp->pNext;
 		}
-		cout << "Колличество элементов списка: " << size << endl;
-		cout << "Общее элементов списка: " << Element::count << endl;
+		cout << "РљРѕР»Р»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃРїРёСЃРєР°: " << size << endl;
+		cout << "РћР±С‰РµРµ СЌР»РµРјРµРЅС‚РѕРІ СЃРїРёСЃРєР°: " << Element::count << endl;
 	}
 };
 
@@ -156,7 +156,7 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	/*int n;
-	cout << "Введите размер списка: "; cin >> n;
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ СЃРїРёСЃРєР°: "; cin >> n;
 	ForwardList list;
 	ForwardList list2;
 	for (int i = 0; i < n; i++)
@@ -167,8 +167,8 @@ void main()
 
 	int value;
 	int index;
-	cout << "Введите индекс добавления элемента: "; cin >> index;
-	cout << "Введите значение добавляемого элемента: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р°: "; cin >> index;
+	cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> value;
 	list.insert(index, value);
 	list.print();
 
